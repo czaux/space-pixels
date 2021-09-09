@@ -1,0 +1,114 @@
+/* Container */
+.imagemenu {
+    width:20%;
+    border:1px solid #b5b5b5;;
+    border-radius:8px;
+    overflow:hidden;
+    position: relative;
+}
+/* Header */
+.imagemenu-header {
+    background:#6bc8f5;
+    border-bottom:1px solid black;
+    overflow:hidden;
+    text-align:center;
+}
+.imagemenu-header span {
+    line-height:1.9em;
+    font-size:1.4em;
+}
+/* List */
+.imagemenu-list {
+    position: relative;
+    padding:0;
+    margin:0;
+    width:100%;
+    overflow:hidden;
+}
+.imagemenu-list-item {
+    position: relative;
+    list-style-type: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background: white;
+    height: 150px;
+}
+.imagemenu-list-img {
+    display:block;
+    max-width:100%;
+    max-height:100%;
+    margin:0 auto;
+    width:auto;
+    height:auto;
+}
+/* Options and Tooltip Container */
+.imagemenu-list-img-options {
+    transition: all 0.3s ease;
+    position:absolute;
+    width:100%;
+    height:150px;
+}
+.imagemenu-list-img-options:hover {
+    background:rgba(100,100,100,0.5);
+}
+/* Options and Tooltip Table */
+.imagemenu-list-img-options-table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    transition: opacity 0.3s ease;
+    visibility:hidden; opacity:0;
+    position:relative;
+    width:174px; height:50px;
+    padding:0; margin:0 auto;
+    top:50%; margin-top: -25px;
+}
+.imagemenu-list-img-options:hover .imagemenu-list-img-options-table {
+    opacity:1;
+    visibility:visible;
+}
+.imagemenu-list-img-options-table tr.imagemenu-options > td {
+    width:50%;
+    text-align:center;
+}
+.imagemenu-list-img-options-table tr.imagemenu-options > td > div{
+    width: 3em;  height: 3em;
+    margin: 0 auto;
+    background:white; box-shadow: none; border: 1px solid black;
+    border-radius:4px;
+    transition: box-shadow 0.2s ease;
+}
+.imagemenu-list-img-options-table tr.imagemenu-options > td > div:hover {
+    box-shadow: inset 0px 0px 8px 1px rgba(0,0,0,0.4);
+}
+.imagemenu-list-img-options-table tr.imagemenu-options > td > div .fa{
+    font-size:2em;
+    line-height:1.5em;
+}
+.imagemenu-list-img-options-table tr.imagemenu-options > td.imagemenu-item-move > div {
+    background:#77ff81;
+}
+.imagemenu-list-img-options-table tr.imagemenu-options > td.imagemenu-item-trash > div {
+    background:#ff6666;
+}
+/* Bug with fa-plus having too much bottom space */
+.imagemenu-list-img-options-table tr.imagemenu-options > td > div  .fa-plus:before {
+    line-height:1.6em;
+}
+
+
+/* ToolTip */
+.imagemenu-tooltip {
+    opacity: 0;
+}
+
+.imagemenu-list-img-options-table tr.imagemenu-options > td.imagemenu-item-trash:hover ~ .imagemenu-tooltip {
+    transition: opacity 0.1s ease;
+    opacity: 1;
+    content: "Remove image from list"
+}
+
+.imagemenu-list-img-options-table tr.imagemenu-options > td.imagemenu-item-move:hover ~ .imagemenu-tooltip {
+    transition: opacity 0.1s ease;
+    opacity: 1;
+    content: "Add image to editor"
+}

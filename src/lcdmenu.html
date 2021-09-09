@@ -1,0 +1,11 @@
+<div>
+  <div class="lcd-container" :class="{active: item.active}" v-for="(item, index) in lcds" >
+
+    <div class="lcd-selector-container">
+      <input type="radio" id="one" :value="item" v-model="picked">
+    </div>
+    <div class="lcd-image-container">
+      <img class="lcd-image" :src="item.imgsrc" />
+    </div>
+  </div>
+</div>

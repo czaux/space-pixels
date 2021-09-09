@@ -1,0 +1,45 @@
+{
+	"version": "2.0.0",
+	"command": "${workspaceRoot}/node_modules/.bin/webpack",
+	"args": [
+		"--display-modules",
+		"--progress"
+	],
+	"echoCommand": true,
+	"tasks": [
+		{
+			"label": "webpack dev",
+			"type": "shell",
+			"command": "${workspaceRoot}/node_modules/.bin/webpack",
+			"args": [
+				"--display-modules",
+				"--progress",
+				"-d"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "webpack dist",
+			"type": "shell",
+			"command": "${workspaceRoot}/node_modules/.bin/webpack",
+			"args": [
+				"--display-modules",
+				"--progress",
+				"-p"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "webpack --progress --colors --watch",
+			"type": "shell",
+			"command": "${workspaceRoot}/node_modules/.bin/webpack",
+			"args": [
+				"--display-modules",
+				"--progress",
+				"-w"
+			],
+			"problemMatcher": []
+		}
+	]
+}

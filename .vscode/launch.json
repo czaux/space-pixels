@@ -1,0 +1,77 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome against localhost, with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8080/index.html",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "name": "Attach to Chrome, with sourcemaps",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "node",
+            "program": "${workspaceRoot}/modextractor/run.js",
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}/modextractor/"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "node2",
+            "program": "${workspaceRoot}/modextractor/index.js",
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}/modextractor/"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "node3",
+            "program": "${workspaceRoot}/src/run.js",
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "typescript",
+            "program": "${workspaceRoot}/modextractor/index.ts",
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}/modextractor/",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script", "start"
+            ],
+            "port": 9226
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "typescript2",
+            "program": "${workspaceRoot}/src/index.ts",
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}/src",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script", "start"
+            ],
+            "port": 9226
+        }
+    ]
+}

@@ -1,0 +1,160 @@
+<html>
+<head>
+<script src="pixi.js"></script>
+<script src="pixi-compressed-textures.js"></script>
+<script>
+//Configuration
+var $config = {
+		bitmaps: {
+			"bigblue_1.dds": {
+				file: "bigblue_1.png",
+				name: "bigblue_1"
+			},
+			"bigblue_2.dds": {
+				file: "bigblue_2.png",
+				name: "bigblue_2"
+			}
+		}
+
+	}
+</script>
+</head>
+<body>
+<textarea id="textplace"></textarea>
+<script>
+
+	function ThrowXMLAtConverter(xmlstring) {
+
+		var parser = new DOMParser();
+		var bitmaps_array = [];
+		//From our XML.js file
+		var xmlDoc = parser.parseFromString(xmlstring, "text/xml");
+		var bitmaps = xmlDoc.getElementsByTagName("bitmap");
+		for (let i = 0; i < bitmaps.length; i++) {
+			if (bitmaps[i].getAttribute('id') && bitmaps[i].getAttribute('name')) {
+				var id = bitmaps[i].getAttribute('id');
+				var name = bitmaps[i].getAttribute('name');
+
+				if($config.bitmaps[name])
+				{
+					bitmaps_array.push(
+							{
+								id: bitmaps[i].getAttribute('id'),
+								name: $config.bitmaps[name].name,
+								file: $config.bitmaps[name].file
+							}
+					);
+				}
+			}
+		}
+
+		return bitmaps_array;
+
+	}
+
+	function StartConversion(xmlstring)
+	{
+
+		bitmaps = ThrowXMLAtConverter(xmlstring);
+
+		var renderer = PIXI.autoDetectRenderer();
+		document.body.appendChild(renderer.view);
+
+		PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
+
+		var stage = new PIXI.Container();
+
+		var loader = PIXI.loader;
+
+		bitmaps.forEach(function(bitmap) {
+			loader.add(bitmap.name, bitmap.file);
+		});
+
+		loader.once('complete', function( loader, resources) {
+
+			var outputObject = {};
+			for(let i = 0; i < bitmaps.length; i++)
+			{
+				stage.removeChildren();
+
+				let texture = new PIXI.Sprite(resources[bitmaps[i].name].texture);
+
+				renderer.resize(texture.width, texture.height);
+
+				stage.addChild(texture);
+
+				//Flip the sprite because ReadPixels flips it back
+				//texture.anchor.x = 1.0;
+				//texture.anchor.y = 1.0;
+				//texture.scale.x = -1;
+				//texture.scale.y = -1;
+
+				renderer.render(stage);
+
+				var somepixels = renderer.extract.pixels(stage);
+				var canvas = document.createElement('canvas');
+				document.body.appendChild(canvas);
+				canvas.width = texture.width;
+				canvas.height = texture.height;
+				var ctx = canvas.getContext('2d');
+				var dataaa = new ImageData(new Uint8ClampedArray(somepixels.buffer), texture.width, texture.height);
+				ctx.putImageData(dataaa, 0,0);
+
+				var parser = new DOMParser();
+				var xmlDoc = parser.parseFromString(xmlstring, "text/xml");
+
+				var colors = xmlDoc.getElementsByTagName("glyph");
+				var codearray = {};
+
+				for (var x = 0, n = colors.length; x < n; x++)
+				{
+					if(colors[x].getAttribute('origin') && colors[x].getAttribute('code'))
+					{
+						if(colors[x].getAttribute('bm') == bitmaps[i].id)
+						{
+							var pos = colors[x].getAttribute('origin').split(',');
+
+							var pixels32 = new Uint32Array(ctx.getImageData(pos[0], pos[1], 1, 1).data.buffer);
+							var pixel = pixels32[0],
+								r1 = (pixel & 0xff),
+								g1 = (pixel >>> 8) & 0xff,
+								b1 = (pixel >>> 16) & 0xff,
+								a1 = (pixel >>> 24) & 0xff;
+
+							var rgba = [r1, g1, b1, a1];
+							var ch = colors[x].getAttribute("ch");
+
+							codearray[pixel] = {'rgba': rgba, 'ch': ch};
+						}
+					}
+				}
+
+				outputObject[bitmaps[i].name] = codearray;
+				console.log(bitmaps[i].name + " | Color Count: " + Object.keys(codearray).length);
+			}
+
+			document.getElementById('textplace').innerText = JSON.stringify(outputObject);
+
+		});
+
+		loader.load();
+
+	}
+
+//window.onload = function() {
+
+
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			StartConversion(this.responseText);
+		}
+	};
+	xmlhttp.open("GET", "FontData.xml", true);
+	xmlhttp.send();
+
+//};
+</script>
+</body>
+
+</html>

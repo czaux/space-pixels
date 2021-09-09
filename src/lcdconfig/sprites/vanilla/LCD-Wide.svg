@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 362 184" style="enable-background:new 0 0 362 184;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#1B3752;}
+	.st1{fill:none;}
+	.st2{fill:#808080;}
+	.st3{fill:#353938;}
+</style>
+<rect id="ScreenBackground" class="st0" width="362" height="184"/>
+<rect id="ScreenBounds" x="3" y="3" class="st1" width="356" height="178"/>
+<path id="SF-ScreenFrame" class="st2" d="M0,0v184h362V0H0z M359,181H3V3h356V181z"/>
+<g id="XMLID_11_">
+	<polygon id="SF-left2" class="st3" points="0,47.5 0,62.5 3,59.7 3,50.3 	"/>
+	<polygon id="SF-left1" class="st3" points="0,130 0,145 3,142.2 3,132.8 	"/>
+	<polygon id="SF-righ2" class="st3" points="362,47.5 362,62.5 359,59.7 359,50.3 	"/>
+	<polygon id="SF-righ1" class="st3" points="362,130 362,145 359,142.2 359,132.8 	"/>
+	<polygon id="SF-top2" class="st3" points="161,0 168.2,0 199.6,0 196.9,3 168.2,3 163.7,3 	"/>
+	<polygon id="SF-top1" class="st3" points="199.6,184 192.5,184 161,184 163.7,181 192.5,181 196.9,181 	"/>
+</g>
+</svg>

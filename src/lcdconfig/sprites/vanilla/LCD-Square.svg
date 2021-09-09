@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 184 184" style="enable-background:new 0 0 184 184;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#1A3752;}
+	.st1{fill:none;}
+	.st2{fill:#808080;}
+	.st3{fill:#353938;}
+</style>
+<rect id="ScreenBackground" x="0" class="st0" width="184" height="184"/>
+<rect id="ScreenBounds" x="3" y="3" class="st1" width="178" height="178"/>
+<path id="SF-Frame" class="st2" d="M0,0v184h184V0H0z M181,181H3V3h178V181z"/>
+<g id="XMLID_11_">
+	<polygon id="SF-left2" class="st3" points="0,45.8 0,60.5 3,57.7 3,48.6 	"/>
+	<polygon id="SF-left1" class="st3" points="0,126.1 0,140.8 3,138 3,128.9 	"/>
+	<polygon id="SF-right2" class="st3" points="184,45.8 184,60.5 181,57.7 181,48.6 	"/>
+	<polygon id="SF-right1" class="st3" points="184,126.1 184,140.8 181,138 181,128.9 	"/>
+</g>
+</svg>

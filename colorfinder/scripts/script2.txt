@@ -1,0 +1,13 @@
+var parser = new DOMParser();
+var xmlDoc = parser.parseFromString(colors,"text/xml");
+
+var atts = xmlDoc.getElementsByTagName("glyph");
+var codearray = [];
+for (var i = 0, n = atts.length; i < n; i++)
+{
+	if (atts[i].getAttribute("code") !== null)
+	{
+		console.log(atts[i].getAttribute("code"));
+		codearray.push(atts[i].getAttribute("code"));
+	}
+}

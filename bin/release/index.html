@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Space Pixels</title>
+<meta charset="UTF-8">
+<meta content="ie=edge" http-equiv="x-ua-compatible">
+<meta name="description" content="A better default template for html-webpack-plugin.">
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="favicons/manifest.json">
+<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style type="text/css">
+.imagemenu{width:20%;border:1px solid #b5b5b5;border-radius:8px;overflow:hidden;position:relative}.imagemenu-header{background:#6bc8f5;border-bottom:1px solid #000;overflow:hidden;text-align:center}.imagemenu-header span{line-height:1.9em;font-size:1.4em}.imagemenu-list{position:relative;padding:0;margin:0;width:100%;overflow:hidden}.imagemenu-list-item{position:relative;list-style-type:none;border-top:1px solid #000;border-bottom:1px solid #000;background:#fff;height:150px}.imagemenu-list-img{display:block;max-width:100%;max-height:100%;margin:0 auto;width:auto;height:auto}.imagemenu-list-img-options{transition:all .3s ease;position:absolute;width:100%;height:150px}.imagemenu-list-img-options:hover{background:hsla(0,0%,39%,.5)}.imagemenu-list-img-options-table{table-layout:fixed;border-collapse:collapse;transition:opacity .3s ease;visibility:hidden;opacity:0;position:relative;width:174px;height:50px;padding:0;margin:0 auto;top:50%;margin-top:-25px}.imagemenu-list-img-options:hover .imagemenu-list-img-options-table{opacity:1;visibility:visible}.imagemenu-list-img-options-table tr.imagemenu-options>td{width:50%;text-align:center}.imagemenu-list-img-options-table tr.imagemenu-options>td>div{width:3em;height:3em;margin:0 auto;background:#fff;box-shadow:none;border:1px solid #000;border-radius:4px;transition:box-shadow .2s ease}.imagemenu-list-img-options-table tr.imagemenu-options>td>div:hover{box-shadow:inset 0 0 8px 1px rgba(0,0,0,.4)}.imagemenu-list-img-options-table tr.imagemenu-options>td>div .fa{font-size:2em;line-height:1.5em}.imagemenu-list-img-options-table tr.imagemenu-options>td.imagemenu-item-move>div{background:#77ff81}.imagemenu-list-img-options-table tr.imagemenu-options>td.imagemenu-item-trash>div{background:#f66}.imagemenu-list-img-options-table tr.imagemenu-options>td>div .fa-plus:before{line-height:1.6em}.imagemenu-tooltip{opacity:0}.imagemenu-list-img-options-table tr.imagemenu-options>td.imagemenu-item-trash:hover~.imagemenu-tooltip{transition:opacity .1s ease;opacity:1;content:"Remove image from list"}.imagemenu-list-img-options-table tr.imagemenu-options>td.imagemenu-item-move:hover~.imagemenu-tooltip{transition:opacity .1s ease;opacity:1;content:"Add image to editor"}body{margin:0;padding:0;background-color:#262626}.space-pixels-editor{image-rendering:pixelated;-ms-interpolation-mode:nearest-neighbor}.canvas-container{border:1px solid #979797}.imagemenu{display:none;z-index:1;position:absolute;margin-right:15px}.lcd-menu-contain{background:#77a0ff;padding:8px}.lcd-menu-contain label{width:200px;border:2px solid #c1caff;display:inline-block;font-size:1.2em;margin-bottom:8px;border-radius:4px;padding:6px;background-color:#77a0ff;cursor:pointer}.lcd-menu-contain ul label{font-size:1em;width:190px}.lcd-menu{width:200px;overflow:hidden;margin:0;max-height:0;padding:0;transition:all .3s ease}.lcd-menu li{text-align:center}.lcd-menu p{margin:0}.lcd-menu svg{height:100px}.lcd-menu-toggle{display:none}.lcd-menu-toggle:checked+.lcd-menu{max-height:999px}.lcd-container{display:flex;margin-top:25px}.lcd-container .lcd-selector-container{flex:1}.lcd-container .lcd-image-container{flex:3;display:flex;align-items:center;justify-content:center;max-height:125px}.lcd-container .lcd-image-container .lcd-image{max-width:100%;max-height:100%}.layers-menu-parent-container{user-select:none}.handle{cursor:move;cursor:-webkit-grabbing}.layers-container{overflow:hidden}.layers-menu-container{display:flex;flex-direction:column;background:#fff;overflow:hidden;position:absolute;right:50px;top:100px;width:200px;z-index:999;height:600px;border-radius:6px;border:1px solid #646464}.layers-menu-topmove .rect{width:1px;height:4px;background-color:#000;margin-right:1px;display:inline-flex}.layers-menu-topmove{display:flex;justify-content:center;background:linear-gradient(180deg,#dedede 0,#bdbdbd);text-align:center;border:1px solid #b2b2b2;border-bottom:1px solid #646464;border-radius:4px 4px 0 0}ul.layers-menu-rect-container{display:inline-flex;margin:0;padding:0;padding:4px}ul.layers-menu-rect-container li.rect{display:inline-flex}ul.layers-menu{padding:0;margin:0;list-style-type:none}li.layers-menu-item{padding:0;margin:0;height:4em}.tabs-container{flex-grow:1;display:flex}.tabcontains{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;align-content:flex-start;justify-content:flex-start}.tabcontains label{background:#eee;text-align:center;flex-grow:1;border:1px solid #c7c7c7;padding:.5em 1em;cursor:pointer;z-index:1;margin-left:-1px}.tabcontains label:first-of-type{margin-left:0}.tabcontains .intab{display:flex;flex-direction:column;min-height:100%;width:100%;margin-top:-1px;border:1px solid #c7c7c7;-webkit-order:1;order:1}.tabcontains .intab,.tabcontains>input[type=radio]{display:none}.tabcontains>input[type=radio]:checked+label{background:#fff;border-bottom:1px solid #fff}.tabcontains input[type=radio]:checked+label+.intab,li.v-rect{display:flex}li.v-rect{flex-direction:column;width:4px;height:1px;background-color:#000;margin-bottom:1px}.layers-parent-container{flex:4;overflow-y:scroll}.layer-container{display:flex;flex-direction:row;background-color:#f3f3f3;border-top:1px solid #b3b3b3;border-bottom:1px solid #b3b3b3}div.layers-layer-left-contain{min-height:75px;display:flex;flex-direction:column;align-items:center}div.layers-layer-number{padding-top:.2em;font-family:Trebuchet MS,Helvetica,sans-serif;font-weight:700;text-align:center;font-size:.8em}.blah{display:flex;flex:1;align-items:center;justify-content:center}ul.layers-layer-vrect-container{display:flex;flex-direction:column;margin:0;padding:0;text-align:center}.layer-img-contain{display:flex;align-items:center;justify-content:center;background-color:#f4f4f4;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z' fill='%238e8e8e' fill-opacity='.49'/%3E%3C/svg%3E");border-left:1px solid #b3b3b3;border-right:1px solid #b3b3b3;width:90px;height:75px}.layer-img-display{max-width:100%;max-height:100%}.layer-controls{display:flex;flex-grow:1;align-items:center}.layer-showhide{display:flex;align-items:center;justify-content:center;width:35px;height:35px;font-size:1.5em}.layer-showhide i{margin-top:-.04em;color:#4e4e4e}.layer-delete{display:flex;align-items:center;justify-content:center;width:35px;height:35px;font-size:1.5em}.layer-delete i{margin-left:-.05em;margin-top:-.02em;color:#4e4e4e}.highlighted{background-color:#90ff9c}.layer-options{flex:2;border-top:2px solid #969696;background-color:#f3f3f3}.outputdialog{position:absolute;bottom:50px;padding:12px;background-color:#7b93ff;border-radius:4px;margin-left:-10px}.custom-popover-content{background:#7b93ff;padding:6px;border-radius:4px;margin-top:-65px;position:relative}.copytoboard{-webkit-border-radius:5;-moz-border-radius:5;border-radius:5px;font-family:Arial;color:#fff;font-size:1em;background:#0c8fe6;padding:8px 13px;border:2px solid #78e0ff;text-decoration:none}.copytoboard:hover{background:#3cb0fd;text-decoration:none}.statustexter{font-family:roboto;font-size:1em;font-weight:500;border-radius:2px;text-align:center}.previewbtn{display:block;width:100%;-webkit-border-radius:5;-moz-border-radius:5;border-radius:5px;font-family:Arial;color:#fff;font-size:1em;background:#2846de;padding:8px 13px;border:2px solid #569fff;text-decoration:none}.previewbtn:hover{background:#3cb0fd;text-decoration:none}.generateimagebtn{-webkit-border-radius:5;-moz-border-radius:5;border-radius:5px;background:#0c8fe6;border:2px dotted #78e0ff}.generateimagebtn,.normalboardbtn{font-family:Arial;color:#fff;font-size:1em;padding:8px 13px;text-decoration:none}.normalboardbtn{display:block;width:100%;-webkit-border-radius:5;-moz-border-radius:5;border-radius:5px;background:#2d678e;border:2px solid #69b8d0;margin-top:8px;margin-bottom:8px}.outputbar{bottom:0;left:0;z-index:3;width:100%;background:#fff}.outputbar ul{display:flex;flex-flow:row;justify-content:space-around;align-content:center;margin:0;padding:0}.outputbar ul li{list-style-type:none;padding:6px}.outputbar-outputitem{display:block}.outputbarlogo-contain{padding:0!important;display:flex}.outputbarlogo{width:300px;margin-left:2%}
+</style>
+</head>
+<body>
+<div class="layers-menu-parent-container">
+<div class="layers-menu-container">
+<div class="layers-menu-topmove">
+<ul class="layers-menu-rect-container">
+<li class="rect"></li>
+<li class="rect"></li>
+<li class="rect"></li>
+<li class="rect"></li>
+<li class="rect"></li>
+<li class="rect"></li>
+<li class="rect"></li>
+<li class="rect"></li>
+<li class="rect"></li>
+<li class="rect"></li>
+</ul>
+</div>
+<div class="tabs-container">
+<section class="tabcontains">
+<input id="tab-one" type="radio" name="grp" checked="checked">
+<label for="tab-one"><i class="fa fa-files-o" aria-hidden="true"></i> Layers</label>
+<div class="intab">
+<div class="layers-parent-container">
+</div>
+<div class="layer-options">
+</div>
+</div>
+<input id="tab-two" type="radio" name="grp">
+<label for="tab-two"><i class="fa fa-th-large" aria-hidden="true"></i> Screens</label>
+<div class="intab">
+<div class="lcdmenu-parent-container">
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div class="space-pixels-editor-container">
+<div id="space-pixels-block-menu"></div>
+<div class="canvas-container-container">
+<canvas class="space-pixels-editor" id="c3" style="image-rendering: pixelated"></canvas>
+</div>
+</div>
+<div class="outputbar-container"></div>
+<script src="app.js" type="text/javascript"></script>
+</body>
+</html>

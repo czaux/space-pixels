@@ -1,0 +1,35 @@
+.outputbar {
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  background:white;
+}
+
+.outputbar ul {
+  display:flex;
+  flex-flow:row;
+  justify-content: space-around;
+  align-content:center;
+  margin:0;
+  padding:0;
+}
+
+.outputbar ul li {
+  list-style-type:none;
+  padding:6px;
+}
+
+.outputbar-outputitem {
+  display:block;
+}
+
+.outputbarlogo-contain {
+  padding:0 !important;
+    display:flex;
+
+}
+.outputbarlogo {
+  width:300px;
+  margin-left:2%;
+}

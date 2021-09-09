@@ -1,0 +1,29 @@
+<div class="outputbar">
+
+    <ul>
+
+        <li class="outputbarlogo-contain" style="flex-grow:1;">
+            <img class="outputbarlogo" :src="logosrc"/>
+        </li>
+        <li  class="outputbar-outputitem">
+            <button class="previewbtn" @click="preview">Preview</button>
+        </li>
+        <li style="flex-grow:1;" class="outputbar-outputitem">
+
+            <button class="generateimagebtn" ref="outputmenubut"  @blur="handleblur" @click="generateoutput" >
+                Generate Image
+            </button>
+
+            <a class="outputdialog" ref="copydialogcontain" @blur="handleblur" v-show="showCopy">
+                <button tabindex="-1" @click="copyoutput" @blur="handleblur"  ref="focuser" class="copytoboard">Copy to Clipboard</button>
+                <div class="statustexter copysucces" v-show="copystatus == 'success'"style="color:#62ff62;">Copying Success!</div>
+                <div class="statustexter copyfail" v-show="copystatus == 'failed'" style="color:#ff2c2c;">Copying Failed!</div>
+                <button tabindex="-1" @click="downloadimage" @blur="handleblur" class="normalboardbtn">Download as .png</button>
+                <button tabindex="-1" @click="downloadasfile" @blur="handleblur" class="normalboardbtn">Download as .txt</button>
+            </a>
+            
+        </li>
+
+    </ul>
+
+</div>
